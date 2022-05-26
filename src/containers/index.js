@@ -8,7 +8,7 @@ const Container = () => {
 		<div css={container}>
 			<div css={infoBox}>
 				<Typography variant="h1">Let us know!</Typography>
-				<Typography textAlign="center">Choose your genre to find your favorite anime here!</Typography>
+				<Typography textAlign={1}>Choose your genre to find your favorite anime here!</Typography>
 			</div>
 		</div>
 	)
