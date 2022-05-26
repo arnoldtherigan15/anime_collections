@@ -1,0 +1,97 @@
+{
+    "env": {
+        "browser": true,
+        "jest": true
+    },
+    "extends": [
+        "airbnb",
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "rules": {
+        "camelcase": "off",
+        "function-paren-newline": 0,
+        "import/extensions": 0,
+        "import/no-extraneous-dependencies": 0,
+        "import/no-named-as-default": 0,
+        "import/no-unresolved": 0,
+        "jsx-a11y/anchor-is-valid": [
+            "error",
+            {
+                "components": [
+                    "Link"
+                ],
+                "specialLink": [
+                    "hrefLeft",
+                    "hrefRight",
+                    "to"
+                ],
+                "aspects": [
+                    "invalidHref",
+                    "preferButton"
+                ]
+            }
+        ],
+        "jsx-a11y/label-has-associated-control": [
+            2,
+            {
+                "labelComponents": [
+                    "label"
+                ],
+                "labelAttributes": [
+                    "label"
+                ],
+                "controlComponents": [
+                    "Select",
+                    "NumberFormat"
+                ],
+                "depth": 3
+            }
+        ],
+        "no-buffer-constructor": 0,
+        "no-nested-ternary": "off",
+        "no-restricted-syntax": "warn",
+        "no-shadow": "off",
+        "padded-blocks": 0,
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [
+                    ".js",
+                    ".jsx"
+                ]
+            }
+        ],
+        "react/no-danger": "off",
+        "react/jsx-props-no-spreading": "off",
+        "semi": [
+            2,
+            "never"
+        ],
+        "linebreak-style": [
+            "error",
+            "windows"
+        ],
+        "react/jsx-curly-brace-presence": 0,
+        "import/no-cycle": "off",
+        "no-param-reassign": "off",
+        "no-extend-native": "warn",
+        "jsx-a11y/control-has-associated-label": [
+            2,
+            {
+                "labelAttributes": [
+                    "label"
+                ],
+                "ignoreElements": [
+                    "div",
+                    "input"
+                ]
+            }
+        ],
+        "react/jsx-no-bind": "off"
+    }
+}

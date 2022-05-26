@@ -1,0 +1,64 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "pages/*": [
+                "pages/*"
+            ],
+            "api/*": [
+                "internals/api/*"
+            ],
+            "config/*": [
+                "src/config/*"
+            ],
+            "containers/*": [
+                "src/containers/*"
+            ],
+            "services/*": [
+                "src/services/*"
+            ],
+            "stories/*": [
+                "src/stories/*"
+            ],
+            "@/atoms/*": [
+                "src/components/atoms/*"
+            ],
+            "@/molecules/*": [
+                "src/components/molecules/*"
+            ],
+            "@/organisms/*": [
+                "src/components/organisms/*"
+            ],
+            "@/pages/*": [
+                "src/components/pages/*"
+            ],
+            "@/templates/*": [
+                "src/components/templates/*"
+            ],
+            "@/constants/*": [
+                "src/data/constants/*"
+            ],
+            "@/schemas/*": [
+                "src/data/schemas/*"
+            ],
+            "@/types/*": [
+                "src/data/types/*"
+            ],
+            "@/hooks/*": [
+                "src/hooks/*"
+            ],
+            "@/redux/*": [
+                "src/redux/*"
+            ],
+            "@/styles/*": [
+                "src/styles/*"
+            ],
+            "@/utils/*": [
+                "src/utils/*"
+            ]
+        }
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
