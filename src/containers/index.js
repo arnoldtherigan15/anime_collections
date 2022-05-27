@@ -7,8 +7,11 @@ const Container = () => {
 	return (
 		<div css={container}>
 			<div css={infoBox}>
-				<Typography variant="h1">Let us know!</Typography>
-				<Typography textAlign={1}>Choose your genre to find your favorite anime here!</Typography>
+				<Typography variant="h1" marginBottom='16px'>Let us know !</Typography>
+				<Typography variant="caption" textAlign="center">Choose your genre to find your favorite anime here!</Typography>
+			</div>
+			<div>
+
 			</div>
 		</div>
 	)
