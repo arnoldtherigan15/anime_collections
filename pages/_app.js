@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/globals.css'
-import Head from "next/head";
+import Head from 'next/head'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 const MyApp = ({ Component, pageProps }) => {
   return (

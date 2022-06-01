@@ -27,6 +27,7 @@ const Default = styled.p(props => ({
 }))
 
 const Typography = ({ variant, children, textAlign, textColor, marginBottom }) => {
+
 	switch (variant) {
 		case "h1":
 			return <Heading1 textAlign={textAlign} textColor={textColor} marginBottom={marginBottom}>{children}</Heading1>

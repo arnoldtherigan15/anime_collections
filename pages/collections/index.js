@@ -1,11 +1,11 @@
 import Head from 'next/head'
-import Container from 'containers/index'
+import Container from 'containers/collections'
 
 const Home = () => {
   return (
     <div>
       <Head>
-        <title>Anime Collections</title>
+        <title>Anime Collections | Collections</title>
       </Head>
       <Container />
     </div>
