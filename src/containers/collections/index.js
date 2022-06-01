@@ -399,7 +399,7 @@ const CollectionsContainer = () => {
         </div>
         <div css={containerCollection}>
           {collections.map((el, idx) => (
-            <div css={cardItem}>
+            <div css={cardItem} key={idx}>
               <div className="action-box">
                 <button
                   className="button-edit"

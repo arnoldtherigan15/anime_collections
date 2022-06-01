@@ -924,6 +924,7 @@ const DetailContainer = () => {
                   ) : (
                     data?.relations?.edges.map((el) => (
                       <div
+                        key={el.node.id}
                         className="card-relation"
                         onClick={() => router.push(`/detail/${el.node.id}`)}
                       >
@@ -949,8 +950,8 @@ const DetailContainer = () => {
                 </div>
                 <div className="character-box">
                   <Typography marginBottom="20px">Characters</Typography>
-                  {data?.characterPreview.edges.map((el) => (
-                    <div className="card-character">
+                  {data?.characterPreview.edges.map((el, idx) => (
+                    <div className="card-character" key={idx}>
                       <div className="left-char">
                         <img src={el.node.image.large} alt="char" />
                         <div>
@@ -1079,6 +1080,7 @@ const DetailContainer = () => {
             ) : (
               data?.relations?.edges.map((el) => (
                 <div
+                  key={el.node.id}
                   className="card-relation"
                   onClick={() => router.push(`/detail/${el.node.id}`)}
                 >
@@ -1104,8 +1106,8 @@ const DetailContainer = () => {
           </div>
           <div className="character-box">
             <Typography marginBottom="20px">Characters</Typography>
-            {data?.characterPreview.edges.map((el) => (
-              <div className="card-character">
+            {data?.characterPreview.edges.map((el, idx) => (
+              <div className="card-character" key={idx}>
                 <div className="left-char">
                   <img src={el.node.image.large} alt="char" />
                   <div>

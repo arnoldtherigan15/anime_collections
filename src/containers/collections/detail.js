@@ -363,7 +363,7 @@ const DetailCollectionsContainer = () => {
         <div css={containerCollection}>
           {/* {JSON.stringify(collections)} */}
           {collections?.map((el, idx) => (
-            <div css={cardItem}>
+            <div css={cardItem} key={idx}>
               <div className="action-box">
                 <button
                   className="button-delete"

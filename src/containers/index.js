@@ -442,8 +442,8 @@ const Container = () => {
           <div>
             <div css={cardContainer}>
               {isLoadingSearchText
-                ? [...Array(10)].map((el) => (
-                    <div css={cardItem}>
+                ? [...Array(10)].map((el, idx) => (
+                    <div css={cardItem} key={idx}>
                       <SkeletonTheme
                         height="200px"
                         baseColor="#16212f"
@@ -463,6 +463,7 @@ const Container = () => {
                   ))
                 : searchData.map((el, idx) => (
                     <div
+                      key={idx}
                       css={cardItem}
                       onClick={() => router.push(`/detail/${el.id}`)}
                     >
@@ -485,8 +486,8 @@ const Container = () => {
             </div>
             <div css={cardContainer}>
               {isLoadData
-                ? [...Array(10)].map((el) => (
-                    <div css={cardItem}>
+                ? [...Array(10)].map((el, idx) => (
+                    <div css={cardItem} key={idx}>
                       <SkeletonTheme
                         height="200px"
                         baseColor="#16212f"
@@ -506,6 +507,7 @@ const Container = () => {
                   ))
                 : data.top.map((el, idx) => (
                     <div
+                      key={idx}
                       css={cardItem}
                       onClick={() => router.push(`/detail/${el.id}`)}
                     >
@@ -529,8 +531,8 @@ const Container = () => {
             </div>
             <div css={cardContainer}>
               {isLoadData
-                ? [...Array(8)].map((el) => (
-                    <div css={cardItem}>
+                ? [...Array(8)].map((el, idx) => (
+                    <div css={cardItem} key={idx}>
                       <SkeletonTheme
                         height="200px"
                         baseColor="#16212f"
@@ -550,6 +552,7 @@ const Container = () => {
                   ))
                 : data.trending.map((el, idx) => (
                     <div
+                      key={idx}
                       css={cardItem}
                       onClick={() => router.push(`/detail/${el.id}`)}
                     >
@@ -569,8 +572,8 @@ const Container = () => {
             </div>
             <div css={cardContainer}>
               {loadingUser && isFirstLoadUser
-                ? [...Array(8)].map((el) => (
-                    <div css={cardItem}>
+                ? [...Array(8)].map((el, idx) => (
+                    <div css={cardItem} key={idx}>
                       <SkeletonTheme
                         height="200px"
                         baseColor="#16212f"
@@ -590,6 +593,7 @@ const Container = () => {
                   ))
                 : userList.map((el, idx) => (
                     <div
+                      key={idx}
                       css={cardItem}
                       onClick={() => router.push(`/detail/${el.id}`)}
                     >
@@ -604,8 +608,8 @@ const Container = () => {
                     </div>
                   ))}
               {loadingUser
-                ? [...Array(8)].map((el) => (
-                    <div css={cardItem}>
+                ? [...Array(8)].map((el, idx) => (
+                    <div css={cardItem} key={idx}>
                       <SkeletonTheme
                         height="200px"
                         baseColor="#16212f"
