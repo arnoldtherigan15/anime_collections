@@ -41,7 +41,6 @@ const header = css`
     margin-top: -100px;
     padding: 0 20px;
     @media (max-width: 767px) {
-      ${'' /* margin-top: -80px; */}
       align-items: flex-end;
     }
     display: flex;
@@ -65,12 +64,6 @@ const header = css`
         @media (max-width: 767px) {
           display: none;
         }
-      }
-    }
-    & .react-loading-skeleton {
-      ${
-        '' /* width: 243px !important;
-      height: 344px !important; */
       }
     }
     & > .cover-image-left {
@@ -134,11 +127,6 @@ const mainLarge = css`
   width: 100%;
   @media (max-width: 767px) {
     display: none;
-  }
-  ${
-    '' /* @media (max-width: 768px) {
-    margin-top: 100px;
-  } */
   }
   .box {
     padding: 20px 10px;
@@ -487,7 +475,6 @@ const DetailContainer = () => {
   const [data, setData] = useState()
   const [isLoadData, setIsLoadData] = useState(false)
   const [isShowModal1, setIsShowModal1] = useState(false)
-  const [isShowModal2, setIsShowModal2] = useState(false)
   const [colName, setColName] = useState('')
   const [collections, setCollections] = useState([])
 
@@ -716,9 +703,7 @@ const DetailContainer = () => {
   }, [])
 
   const openModal1 = () => {
-    // if (!collections.length) setIsShowModal1(true)
     setIsShowModal1(true)
-    // else setIsShowModal2(true)
   }
 
   const submitColFirst = (e) => {

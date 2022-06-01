@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react'
 import { jsx, css } from '@emotion/react'
 import { useRouter } from 'next/router'
+import Swal from 'sweetalert2'
 import Typography from '@/atoms/typography'
 import Navigation from '@/molecules/navigation'
 import ArrowBack from '../../../public/img/arrow-left.svg'
@@ -9,11 +10,6 @@ import ArrowBack from '../../../public/img/arrow-left.svg'
 const container = css`
   height: 100vh;
   width: 100vw;
-  ${
-    '' /* display: flex;
-	flex-direction: column;
-	overflow-x: hidden; */
-  }
 `
 
 const image = css`
@@ -44,26 +40,7 @@ const textBox = css`
 `
 
 const main = css`
-  ${'' /* flex-grow: 1; */}
   padding-top: 20px;
-`
-
-const imageBook = css`
-  position: absolute;
-  width: 200px;
-  object-fit: contain;
-  right: -90px;
-  bottom: 30px;
-`
-
-const button = css`
-  background: #16212f;
-  padding: 10px;
-  border-radius: 10px;
-  margin-bottom: 30px;
-  margin: 0 20px 40px;
-  box-shadow: 0 4px 2px -2px #d9d4d7;
-  cursor: pointer;
 `
 
 const imageCircle1 = css`
@@ -113,7 +90,6 @@ const cardItem = css`
     background: #e84118;
     border: none;
     padding: 5px 10px;
-    ${'' /* box-shadow: 0 4px 2px -2px grey; */}
     border-top-right-radius: 5px;
     cursor: pointer;
   }
@@ -122,7 +98,6 @@ const cardItem = css`
     background: #4cd137;
     border: none;
     padding: 5px 10px;
-    ${'' /* box-shadow: 0 4px 2px -2px grey; */}
     border-top-left-radius: 5px;
     cursor: pointer;
   }
@@ -155,11 +130,9 @@ const cardTitleBox = css`
   bottom: 0;
   left: 0;
   margin-top: 10px;
-  ${'' /* transition: color .2s ease; */}
   text-overflow: ellipsis;
   overflow: hidden;
   width: 100%;
-  ${'' /* height: 1.2em;  */}
   white-space: nowrap;
   text-align: center;
   background: #16212f;
@@ -311,9 +284,7 @@ const CollectionsContainer = () => {
   }, [])
 
   const openModal1 = () => {
-    // if (!collections.length) setIsShowModal1(true)
     setIsShowModal1(true)
-    // else setIsShowModal2(true)
   }
 
   const onCreateCollection = () => {
@@ -326,7 +297,7 @@ const CollectionsContainer = () => {
       ? true
       : false
     if (isExists) {
-      // alert
+      Swal.fire('warning', 'Collection already exists', 'warning')
     } else {
       setCollections([...collections, { name: colName, data: [] }])
       localStorage.setItem(

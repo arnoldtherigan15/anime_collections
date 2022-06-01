@@ -2,19 +2,15 @@
 import React, { useEffect, useState } from 'react'
 import { jsx } from '@emotion/react'
 import { useRouter } from 'next/router'
-import InfiniteScroll from 'react-infinite-scroller'
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
 import Typography from '@/atoms/typography'
 import Api from '../services/api'
 import {
   container,
   hero,
-  imageHero1,
   searchBox,
   main,
   searchInput,
-  tab,
-  tabItem,
   divider,
   cardContainer,
   cardItem,
@@ -24,7 +20,6 @@ import {
   imageCircle1,
   imageCircle2,
   imageBook,
-  loadingBox,
   buttonCollection,
   textBox,
 } from './style'
@@ -134,7 +129,7 @@ const Container = () => {
         })
       })
       .catch((err) => {
-        console.log(err, '>>>>>>>>>>> erroor')
+        console.log(err, '>>>>>>>>>>> Error')
       })
       .finally((_) => {
         setIsLoadData(false)

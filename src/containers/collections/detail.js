@@ -9,11 +9,6 @@ import ArrowBack from '../../../public/img/arrow-left.svg'
 const container = css`
   height: 100vh;
   width: 100vw;
-  ${
-    '' /* display: flex;
-	flex-direction: column;
-	overflow-x: hidden; */
-  }
 `
 
 const image = css`
@@ -153,11 +148,9 @@ const cardTitleBox = css`
   bottom: 0;
   left: 0;
   margin-top: 10px;
-  ${'' /* transition: color .2s ease; */}
   text-overflow: ellipsis;
   overflow: hidden;
   width: 100%;
-  ${'' /* height: 1.2em;  */}
   white-space: nowrap;
   text-align: center;
   background: #16212f;
@@ -349,9 +342,6 @@ const DetailCollectionsContainer = () => {
           >
             {name} Collections
           </Typography>
-          {/* <div css={box1}>
-						<Typography variant="caption" textAlign="center" textColor="white">All your collection wil be saved here</Typography>
-					</div> */}
         </div>
       </div>
       <div css={main}>
@@ -361,7 +351,6 @@ const DetailCollectionsContainer = () => {
           </Typography>
         </button>
         <div css={containerCollection}>
-          {/* {JSON.stringify(collections)} */}
           {collections?.map((el, idx) => (
             <div css={cardItem} key={idx}>
               <div className="action-box">
