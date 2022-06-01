@@ -21,10 +21,23 @@ const imageHero1 = css`
   width: 160px;
   object-fit: contain;
   position: absolute;
-  top: 10px;
+  top: 10%;
   left: 50%;
   transform: translate(-50%, 0);
   z-index: 2;
+`
+
+const textBox = css`
+  position: relative;
+  top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (max-width: 370px) {
+    > h1 {
+      font-size: 26px !important;
+    }
+  }
 `
 
 const searchBox = css`
@@ -263,4 +276,5 @@ export {
   imageBook,
   loadingBox,
   buttonCollection,
+  textBox,
 }

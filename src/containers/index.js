@@ -26,6 +26,7 @@ import {
   imageBook,
   loadingBox,
   buttonCollection,
+  textBox,
 } from './style'
 
 const Container = () => {
@@ -416,7 +417,16 @@ const Container = () => {
         <img css={imageCircle1} src="/img/circle-1.png" alt="circle patter" />
         <img css={imageCircle2} src="/img/circle-2.png" alt="circle patter" />
         <img css={imageBook} src="/img/book-stack.png" alt="book stack" />
-        <img css={imageHero1} src="/img/men-smile.png" alt="men smile" />
+        <div css={textBox}>
+          <Typography
+            variant="h1"
+            marginBottom="14px"
+            textAlign="center"
+            textColor="white"
+          >
+            Anime Collections
+          </Typography>
+        </div>
         <form css={searchBox}>
           <input
             css={searchInput}

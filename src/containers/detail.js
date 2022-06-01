@@ -388,6 +388,7 @@ const modalInitial = css`
     position: absolute;
     top: 50%;
     left: 50%;
+    z-index: 99;
     transform: translate(-50%, -50%);
     -webkit-animation: fadein 0.7s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 0.7s; /* Firefox < 16 */
@@ -1147,7 +1148,7 @@ const DetailContainer = () => {
                   className="input1"
                   type="text"
                   value={colName}
-                  placeholder="Type the collection name ?"
+                  placeholder="Type the collection name"
                   onChange={(e) =>
                     setColName(e.target.value.replace(/[^\w\s]/gi, ''))
                   }

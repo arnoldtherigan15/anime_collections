@@ -459,7 +459,7 @@ const CollectionsContainer = () => {
                 className="input1"
                 type="text"
                 value={colName}
-                placeholder="Type the collection name ?"
+                placeholder="Type the collection name"
                 onChange={(e) =>
                   setColName(e.target.value.replace(/[^\w\s]/gi, ''))
                 }
