@@ -5,6 +5,8 @@ import { useRouter } from 'next/router'
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
 import Typography from '@/atoms/typography'
 import Api from '../services/api'
+import { GET_ALL } from '../services/index'
+import { useQuery } from '@apollo/client'
 import {
   container,
   hero,
@@ -389,6 +391,7 @@ const Container = () => {
   useEffect(() => {
     loadUserList(pageUser)
   }, [])
+
   const handleScroll = (e) => {
     if (
       Math.ceil(e.target.scrollHeight - e.target.scrollTop) ===
@@ -405,6 +408,8 @@ const Container = () => {
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  const { loading, error, data: animeData } = useQuery(GET_ALL())
 
   return (
     <div css={container} onScroll={handleScroll}>
@@ -480,7 +485,7 @@ const Container = () => {
               <Typography marginBottom="20px">Top 10 Anime</Typography>
             </div>
             <div css={cardContainer}>
-              {isLoadData
+              {loading
                 ? [...Array(10)].map((el, idx) => (
                     <div css={cardItem} key={idx}>
                       <SkeletonTheme
@@ -500,7 +505,7 @@ const Container = () => {
                       </SkeletonTheme>
                     </div>
                   ))
-                : data.top.map((el, idx) => (
+                : animeData.top.media.map((el, idx) => (
                     <div
                       key={idx}
                       css={cardItem}
@@ -525,7 +530,7 @@ const Container = () => {
               <Typography marginBottom="20px">Trending Now</Typography>
             </div>
             <div css={cardContainer}>
-              {isLoadData
+              {loading
                 ? [...Array(8)].map((el, idx) => (
                     <div css={cardItem} key={idx}>
                       <SkeletonTheme
@@ -545,7 +550,7 @@ const Container = () => {
                       </SkeletonTheme>
                     </div>
                   ))
-                : data.trending.map((el, idx) => (
+                : animeData.trending.media.map((el, idx) => (
                     <div
                       key={idx}
                       css={cardItem}

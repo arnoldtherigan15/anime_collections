@@ -2,6 +2,8 @@ import React from 'react'
 import '../styles/globals.css'
 import Head from 'next/head'
 import 'react-loading-skeleton/dist/skeleton.css'
+import { ApolloProvider } from '@apollo/client'
+import client from '../src/services/client'
 
 const MyApp = ({ Component, pageProps }) => {
   return (
@@ -12,7 +14,9 @@ const MyApp = ({ Component, pageProps }) => {
           rel="stylesheet"
         />
       </Head>
-      <Component {...pageProps} />
+      <ApolloProvider client={client}>
+        <Component {...pageProps} />
+      </ApolloProvider>
     </>
   )
 }
